@@ -1,26 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Tarjeta from './components/Tarjeta';
+import living from './img/silla.jpg';
+import sillon from './img/sillon.jpg';
+import sillones from './img/sillones.jpg';
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+    <Tarjeta nombre="Living nórdico" precio="8000" imagen={living} alt="Imagen de una silla y una mesa"/>
+    <Tarjeta nombre="Sillón con almohadones" precio="7000" imagen={sillon} alt="Imagen de un sillón en L"/>
+    <Tarjeta nombre="Sillones" precio="5000" imagen={sillones} alt="Imagen de dos sillones amarillos"/>
     </div>
-  );
-}
+  )
+  };
 
 export default App;
